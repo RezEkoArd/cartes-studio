@@ -21,7 +21,7 @@
     </button>
 
     <!-- Hamburger -->
-    <label class="flex content-center justify-center my-auto sm:hidden">
+    <label class="flex content-center justify-center my-auto lg:hidden">
         <input type="checkbox" class="peer hidden" />
         <Menu size="25" color="black"/>
 
