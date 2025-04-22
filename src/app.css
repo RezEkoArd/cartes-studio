@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+    --color-primary: #ec0c2c;
+    --color-primary-light: #eb878c;
+    --color-primary-dark: #930526;
+    --color-accent: #eb878c;
+    --color-deep-100: #eb878c;
+    --color-deep-200: #930526;
+    --color-deep-300: #91071b;
+    --color-deep-400: #83151b;
+    --color-deep-500: #6a041c;
+
+    --font-display: "Montserrat", sans-serif;
+}
