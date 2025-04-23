@@ -1,7 +1,8 @@
 <script>
+  import Navbar from "$lib/components/Navbar.svelte";
     let {children} = $props();
     import "../app.css";
-  import Navbar from "../components/Navbar.svelte";
+
 </script>
 
 <header>
