@@ -1,13 +1,13 @@
 <script>
-  import Navbar from "$lib/components/Navbar.svelte";
+  import Footer from "$lib/components/Footer.svelte";
+import Navbar from "$lib/components/Navbar.svelte";
     let {children} = $props();
     import "../app.css";
 
 </script>
 
-<header>
+<main class="relative">
     <Navbar/>
-</header>
-<main>
     {@render children()}
+    <Footer/>
 </main>

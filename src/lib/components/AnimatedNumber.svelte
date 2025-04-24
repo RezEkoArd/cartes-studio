@@ -40,3 +40,13 @@
     </div>
     <p class="text-gray-600 text-lg font-medium"> {label} </p>
 </div>
+
+
+<!-- Cara menggunakannya  -->
+
+<!-- <AnimatedNumber
+target={50}
+label="Toko Aktif"
+duration={1500}
+class="border-purple-500 text-purple-600"
+/> -->

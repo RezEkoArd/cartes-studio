@@ -3,10 +3,10 @@
     import {MoveUpRight} from '@lucide/svelte';
 </script>
 
-<div class="stick top-0 flex p-6 content-center justify-between bg-accent text-slate-100 relative">
+<div class="sticky top-0 z-50 lg:static flex p-6 content-center justify-between bg-accent text-slate-100">
     <div class="flex items-center gap-2">
         <img src="/logo.png" alt="logo" class="w-10">
-        <h1 class="font-semibold text-xl text-primary-dark ">Cartes Studio</h1>
+        <h1 class="font-semibold text-xl text-primary-dark ">Cartes ID</h1>
     </div>
 
     <div class="hidden lg:flex items-center space-x-20">

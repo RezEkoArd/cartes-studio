@@ -1,11 +1,13 @@
 <script>
-  import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
+    import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	import {ChevronsDown} from '@lucide/svelte';
     import {reveal} from 'svelte-reveal';
+    import EmblaAutoScroll from '$lib/components/EmblaAutoScroll.svelte';
+    import Hero from "$lib/assets/hero.png";
 </script>
 
-
-<section class="bg-primary-dark">
+<!-- Hero Section -->
+<section class="bg-linear-to-t from-primary-dark to-deep-400">
     <div class="max-w-screen-xl flex flex-col-reverse gap-10 px-4 py-16 mx-auto lg:flex-row lg:items-center lg:justify-between">
         <div class="lg:mb-0 lg:max-w-xl sr__hide" use:reveal={{preset: 'fade', duration: '2000'}}>
             <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white dark:text-white sm:text-5xl">
@@ -23,34 +25,22 @@
         </div>
 
         <div class="lg:w-1/2 " >
-            <img src="hero.png" alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
+            <img src={Hero} alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
         </div>
     </div>
 </section>
 
-<section class="">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <AnimatedNumber
-          target={50}
-          label="Toko Aktif"
-          duration={1500}
-          class="border-purple-500 text-purple-600"
-        />
-        
-        <AnimatedNumber
-          target={1500}
-          label="Pelanggan"
-          duration={2000}
-          format
-          class="border-green-500 text-green-600"
-        />
-        
-        <AnimatedNumber
-          target={95}
-          label="Rating"
-          duration={2500}
-          class="border-orange-500 text-orange-600"
-        />
-      </div>
+
+<!-- About me -->
+<section class="bg-accent">
+    <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
+        <h1 class="font-extrabold text-4xl text-primary">About Cartes ID</h1>
+
+        <EmblaAutoScroll class="bg-primary-light w-full h-20"/>
+
+        <p class="font-normal text-xl lg:text-justify lg:text-4xl leading-6 lg:leading-relaxed text-gray-900 antialiased">We help your brands maximize sales and brand visibility through expert-led TikTok & Shopee affiliate creators and live shopping experiences. Drive engagement, conversions, and sustainable growth with our performance-based creator strategies.</p>
+
+       
+    </div>
 </section>
 
