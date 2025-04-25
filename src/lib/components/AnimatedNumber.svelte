@@ -3,11 +3,11 @@
   import { tweened } from "svelte/motion";
 
 
-    export let target = 0;
-    export let duration = 2000;
-    export let easing = cubicOut;
-    export let label = "Total";
-    export let format = false;
+    // let target = 0;
+    // let duration = 2000;
+    let easing = cubicOut;
+    let { label, content, target, duration, classes  } = $props();
+    let format = false;
 
     const count = tweened(0, {duration, easing});
 
@@ -34,11 +34,12 @@
     const formatter = new Intl.NumberFormat('id-ID');
 </script>
 
-<div use:animationScroll class="border-2 border-blue-500 rounded-lg p-6 text-center transition-all duration-300 hover:scale-105">
-    <div class="text-5xl font-bold text-blue-600 mb-2">
+<div use:animationScroll class="{classes} border-2 w-[300px] h-[200px] flex justify-center items-center flex-col border-primary-dark rounded-lg p-6 text-center transition-all duration-300 hover:scale-105">
+    <p class="text-gray-800 text-md font-medium" class:label> {label} </p>
+    <div class="text-6xl font-bold text-primary-dark mb-2">
         {format ? formatter.format(Math.floor($count)) : Math.floor($count)}
     </div>
-    <p class="text-gray-600 text-lg font-medium"> {label} </p>
+    <p class="text-slate-800 text-2xl font-semibold">{content}</p>
 </div>
 
 

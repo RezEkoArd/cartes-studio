@@ -32,15 +32,39 @@
 
 
 <!-- About me -->
-<section class="bg-accent">
+<section class="bg-accent flex flex-col items-center justify-center">
     <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
-        <h1 class="font-extrabold text-4xl text-primary">About Cartes ID</h1>
+        <h1 class="font-extrabold text-4xl text-primary" use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>Why us</h1>
 
-        <EmblaAutoScroll class="bg-primary-light w-full h-20"/>
+        <div use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
+            <EmblaAutoScroll class="bg-primary-light w-full h-20"/>
+        </div>
 
-        <p class="font-normal text-xl lg:text-justify lg:text-4xl leading-6 lg:leading-relaxed text-gray-900 antialiased">We help your brands maximize sales and brand visibility through expert-led TikTok & Shopee affiliate creators and live shopping experiences. Drive engagement, conversions, and sustainable growth with our performance-based creator strategies.</p>
+        <p class="font-normal text-xl lg:text-center lg:text-3xl leading-6 lg:leading-10 lg:font-medium text-gray-900 antialiased" use:reveal={{preset: 'fade',x: 100, duration: '2000'}}>Cartes.id adalah partner strategis brand Anda dalam membangun, mengelola, dan mengembangkan
+            aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital</p>
+    </div>
 
-       
+    <div class="w-full flex flex-col items-center justify-center content-center gap-3 lg:flex-row lg:gap-10 mb-10" use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
+        <AnimatedNumber
+        target={50}
+        label="Toko Aktif"
+        content="Creators +"
+        duration={1500}
+        classes="mx-auto" />
+
+        <AnimatedNumber
+        target={1000}
+        label="Toko Aktif"
+        content="Creators +"
+        duration={1500}
+        classes="mx-auto" />
+
+        <AnimatedNumber
+        target={500}
+        label="Toko Aktif"
+        content="Creators +"
+        duration={1500}
+        classes="mx-auto" />
     </div>
 </section>
 
