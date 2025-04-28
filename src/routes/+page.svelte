@@ -34,25 +34,7 @@
         }
       ];
 
-      //Portofolio data dummy
-      let portfolios = [
-    {
-      title: "E-commerce Website",
-      category: "Web Development",
-      image: "/src/lib/assets/img1.jpg"
-    },
-    {
-      title: "Mobile Banking App",
-      category: "UI/UX Design",
-      image: "/src/lib/assets/img2.jpg"
-    },
-    {
-      title: "Brand Identity",
-      category: "Branding",
-      image: "/src/lib/assets/img7.jpg"
-    },
-      ];
-
+    // data testimonial
     let testimonials = [
       {
         name: "Andi Wijaya",
@@ -73,6 +55,27 @@
         image: "/src/lib/assets/profile/profile3.jpg"
       }
     ];
+
+    //Portofolio data dummy
+    let portfolios = [
+    { title: "E-commerce Website",   category: "Web",     image: "/src/lib/assets/img1.jpg" },
+    { title: "Mobile Banking App",    category: "App",     image: "/src/lib/assets/img2.jpg" },
+    { title: "Brand Identity",        category: "Brand",   image: "/src/lib/assets/img6.jpg" },
+    { title: "Content Campaign",      category: "Content", image: "/src/lib/assets/img1.jpg" },
+    { title: "Landing Page Promo",    category: "Web",     image: "/src/lib/assets/img2.jpg" },
+    { title: "Social Media Kit",      category: "Content", image: "/src/lib/assets/img6.jpg" },
+  ];
+
+    // Build unique categories + "All"
+    let categories = ["All", ...new Set(portfolios.map(p => p.category))];
+  let active = "All";
+
+  // Reactive filtered list
+  $: filtered = active === "All"
+    ? portfolios
+    : portfolios.filter(p => p.category === active);
+
+
 </script>
 
 
@@ -198,14 +201,31 @@
 <section class="bg-deep-500 py-20">
   <div class="max-w-screen-xl mx-auto px-6">
     <!-- Title -->
-    <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold text-accent mb-4">Our Portfolio</h2>
-      <p class="text-slate-300 max-w-2xl mx-auto">Beberapa project terbaik yang pernah kami kerjakan untuk berbagai industri dan klien.</p>
+    <div class="text-center mb-8">
+      <h2 class="text-4xl font-bold text-accent mb-2">Our Portfolio</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto">
+        Beberapa project terbaik yang pernah kami kerjakan untuk berbagai industri dan klien.
+      </p>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      {#each categories as cat}
+        <button
+          class="px-4 py-2 rounded-full text-sm font-medium transition
+                 {active === cat 
+                   ? 'bg-accent text-primary-dark' 
+                   : 'bg-deep-400 text-slate-300 hover:bg-deep-300'}"
+          on:click={() => active = cat}
+        >
+          {cat}
+        </button>
+      {/each}
     </div>
 
     <!-- Grid Portfolios -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-      {#each portfolios as portfolio}
+      {#each filtered as portfolio (portfolio.title)}
         <div class="bg-accent rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
           <img 
             src={portfolio.image} 
@@ -215,7 +235,9 @@
           <div class="p-5 flex flex-col gap-2">
             <h3 class="text-primary-dark text-xl font-bold">{portfolio.title}</h3>
             <p class="text-deep-300 text-sm">{portfolio.category}</p>
-            <button class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">View Project</button>
+            <button class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">
+              View Project
+            </button>
           </div>
         </div>
       {/each}
