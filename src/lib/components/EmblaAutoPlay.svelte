@@ -1,13 +1,13 @@
 <script>
   import emblaCarouselSvelte from 'embla-carousel-svelte';
-  import AutoScroll from 'embla-carousel-autoplay';
+  import Autoplay from 'embla-carousel-autoplay';
 
   import slide1 from "$lib/assets/img1.jpg";
   import slide2 from "$lib/assets/img2.jpg";
-  import slide3 from "$lib/assets/img3.jpg";
+  import slide3 from "$lib/assets/img6.jpg";
 
-  let options = { loop: false }
-  let plugins = [AutoScroll()]
+  let options = { loop: true,  }
+  let plugins = [Autoplay()]
 </script>
 
 <div class="overflow-hidden" use:emblaCarouselSvelte="{{ options, plugins }}">

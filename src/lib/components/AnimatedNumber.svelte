@@ -2,9 +2,6 @@
   import { cubicOut } from "svelte/easing";
   import { tweened } from "svelte/motion";
 
-
-    // let target = 0;
-    // let duration = 2000;
     let easing = cubicOut;
     let { label, content, target, duration, classes  } = $props();
     let format = false;
