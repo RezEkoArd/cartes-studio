@@ -33,6 +33,46 @@
           icon: "💻",
         }
       ];
+
+      //Portofolio data dummy
+      let portfolios = [
+    {
+      title: "E-commerce Website",
+      category: "Web Development",
+      image: "/src/lib/assets/img1.jpg"
+    },
+    {
+      title: "Mobile Banking App",
+      category: "UI/UX Design",
+      image: "/src/lib/assets/img2.jpg"
+    },
+    {
+      title: "Brand Identity",
+      category: "Branding",
+      image: "/src/lib/assets/img7.jpg"
+    },
+      ];
+
+    let testimonials = [
+      {
+        name: "Andi Wijaya",
+        position: "CEO StartupTech",
+        quote: "Layanan yang sangat profesional, timnya cepat tanggap dan hasilnya sangat memuaskan!",
+        image: "/src/lib/assets/profile/profile1.jpg"
+      },
+      {
+        name: "Rina Ayu",
+        position: "Marketing Manager Shopee",
+        quote: "Kami sangat senang bekerja sama, semua kebutuhan desain kami terpenuhi dengan cepat dan tepat.",
+        image: "/src/lib/assets/profile/profile2.jpg"
+      },
+      {
+        name: "Dimas Pratama",
+        position: "Founder Dims Studio",
+        quote: "Sangat recommended untuk pembuatan website maupun branding!",
+        image: "/src/lib/assets/profile/profile3.jpg"
+      }
+    ];
 </script>
 
 
@@ -113,7 +153,6 @@
 </section>
 
 <!-- Our Services -->
-
 <section class="bg-accent py-16">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
     <h2 class="text-4xl font-extrabold text-primary-dark mb-5" use:reveal={{ y: 50, duration: 500 }}>
@@ -150,6 +189,66 @@
             </button>
           </div>
         </div>    
+      {/each}
+    </div>
+  </div>
+</section>
+
+<!-- Portofolio  Section-->
+<section class="bg-deep-500 py-20">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <!-- Title -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-accent mb-4">Our Portfolio</h2>
+      <p class="text-slate-300 max-w-2xl mx-auto">Beberapa project terbaik yang pernah kami kerjakan untuk berbagai industri dan klien.</p>
+    </div>
+
+    <!-- Grid Portfolios -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      {#each portfolios as portfolio}
+        <div class="bg-accent rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
+          <img 
+            src={portfolio.image} 
+            alt={portfolio.title} 
+            class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+          />
+          <div class="p-5 flex flex-col gap-2">
+            <h3 class="text-primary-dark text-xl font-bold">{portfolio.title}</h3>
+            <p class="text-deep-300 text-sm">{portfolio.category}</p>
+            <button class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">View Project</button>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-accent py-20">
+  <div class="max-w-screen-xl mx-auto px-6">
+    <!-- Title -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-primary mb-4">What Our Clients Say</h2>
+      <p class="text-primary-dark max-w-2xl mx-auto">Testimoni dari para klien kami yang telah mempercayakan project mereka kepada kami.</p>
+    </div>
+
+    <!-- Testimonial Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {#each testimonials as testimonial}
+        <div class="bg-primary-dark rounded-2xl p-6 shadow-lg hover:shadow-2xl transition duration-300 flex flex-col justify-between">
+          <p class="text-slate-100 mb-6 italic">"{testimonial.quote}"</p>
+          <div class="flex items-center gap-4">
+            <img 
+              src={testimonial.image}
+              alt={testimonial.name}
+              class="w-14 h-14 rounded-full object-cover"
+            />
+            <div>
+              <h4 class="text-white font-bold">{testimonial.name}</h4>
+              <p class="text-white text-sm font-">{testimonial.position}</p>
+            </div>
+          </div>
+        </div>
       {/each}
     </div>
   </div>
