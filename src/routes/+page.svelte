@@ -9,6 +9,13 @@
     import Shopee from "$lib/assets/logo-partner/shopee-logo.png";
     import Twitch from "$lib/assets/logo-partner/twitch-logo.png";
     import Fiver from "$lib/assets/logo-partner/fiver-logo.png";
+    import img1 from '$lib/assets/img1.jpg';
+    import img2 from '$lib/assets/img2.jpg';
+    import img6 from '$lib/assets/img6.jpg';
+    import profile1 from '$lib/assets/profile/profile1.jpg';
+    import profile2 from '$lib/assets/profile/profile2.jpg';
+    import profile3 from '$lib/assets/profile/profile3.jpg';
+
 
     // Content Section Our Services
     let services = [
@@ -40,30 +47,30 @@
         name: "Andi Wijaya",
         position: "CEO StartupTech",
         quote: "Layanan yang sangat profesional, timnya cepat tanggap dan hasilnya sangat memuaskan!",
-        image: "/src/lib/assets/profile/profile1.jpg"
+        image: profile1
       },
       {
         name: "Rina Ayu",
         position: "Marketing Manager Shopee",
         quote: "Kami sangat senang bekerja sama, semua kebutuhan desain kami terpenuhi dengan cepat dan tepat.",
-        image: "/src/lib/assets/profile/profile2.jpg"
+        image: profile2
       },
       {
         name: "Dimas Pratama",
         position: "Founder Dims Studio",
         quote: "Sangat recommended untuk pembuatan website maupun branding!",
-        image: "/src/lib/assets/profile/profile3.jpg"
+        image: profile3
       }
     ];
 
     //Portofolio data dummy
     let portfolios = [
-    { title: "E-commerce Website",   category: "Web",     image: "/src/lib/assets/img1.jpg" },
-    { title: "Mobile Banking App",    category: "App",     image: "/src/lib/assets/img2.jpg" },
-    { title: "Brand Identity",        category: "Brand",   image: "/src/lib/assets/img6.jpg" },
-    { title: "Content Campaign",      category: "Content", image: "/src/lib/assets/img1.jpg" },
-    { title: "Landing Page Promo",    category: "Web",     image: "/src/lib/assets/img2.jpg" },
-    { title: "Social Media Kit",      category: "Content", image: "/src/lib/assets/img6.jpg" },
+    { title: "E-commerce Website",   category: "Web",     image: img1 },
+    { title: "Mobile Banking App",    category: "App",     image: img2 },
+    { title: "Brand Identity",        category: "Brand",   image: img6 },
+    { title: "Content Campaign",      category: "Content", image: img1 },
+    { title: "Landing Page Promo",    category: "Web",     image: img2 },
+    { title: "Social Media Kit",      category: "Content", image: img6 },
   ];
 
     // Build unique categories + "All"
