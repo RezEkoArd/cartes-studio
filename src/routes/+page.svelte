@@ -112,7 +112,7 @@
 
 
 <!-- About me -->
-<section class="bg-accent">
+<section id="aboutme" class="bg-accent">
     <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
         <h1 class="font-extrabold text-4xl text-primary" use:reveal={{y: 100, duration: '2000'}}>Why us</h1>
 
@@ -149,7 +149,7 @@
 </section>
 
 <!-- Client Page -->
-<section class="bg-primary-dark">
+<section  class="bg-primary-dark">
     <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto">
       <h1 class="font-extrabold text-4xl text-accent text-center mb-10">Proudly Featured In</h1>
   
@@ -163,7 +163,7 @@
 </section>
 
 <!-- Our Services -->
-<section class="bg-accent py-16">
+<section id="services" class="bg-accent py-16">
   <div class="max-w-screen-xl mx-auto px-4 text-center">
     <h2 class="text-4xl font-extrabold text-primary-dark mb-5" use:reveal={{ y: 50, duration: 500 }}>
       Our Services
@@ -205,7 +205,7 @@
 </section>
 
 <!-- Portofolio  Section-->
-<section class="bg-deep-500 py-20">
+<section class="bg-deep-500 py-20 "id="portofolio">
   <div class="max-w-screen-xl mx-auto px-6">
     <!-- Title -->
     <div class="text-center mb-8">
@@ -231,7 +231,7 @@
     </div>
 
     <!-- Grid Portfolios -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
       {#each filtered as portfolio (portfolio.title)}
         <div class="bg-accent rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
           <img 
