@@ -54,7 +54,8 @@
           <p class="text-slate-500">Fill out the form below, and we’ll get back to you soon.</p>
         </div>
   
-        <form class="space-y-6" on:submit={handleSubmit}>
+        <!-- <form class="space-y-6" on:submit={handleSubmit}> -->
+        <form class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label for="name" class="block text-sm font-medium text-primary-dark">Name</label>

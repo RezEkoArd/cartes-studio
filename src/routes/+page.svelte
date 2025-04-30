@@ -124,28 +124,28 @@
             aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital</p>
     </div>
 
-    <div class="w-3/4 mx-auto flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
-        <AnimatedNumber
-        target={50}
-        label="Toko Aktif"
-        content="Creators +"
-        duration={1500}
-        classes="mx-auto" />
+      <div class="w-3/4 mx-auto flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
+          <AnimatedNumber
+          target={50}
+          label="Toko Aktif"
+          content="Creators +"
+          duration={1500}
+          classes="mx-auto" />
 
-        <AnimatedNumber
-        target={1000}
-        label="Toko Aktif"
-        content="Creators +"
-        duration={1500}
-        classes="mx-auto" />
+          <AnimatedNumber
+          target={1000}
+          label="Toko Aktif"
+          content="Creators +"
+          duration={1500}
+          classes="mx-auto" />
 
-        <AnimatedNumber
-        target={500}
-        label="Toko Aktif"
-        content="Creators +"
-        duration={1500}
-        classes="mx-auto" />
-    </div>
+          <AnimatedNumber
+          target={500}
+          label="Toko Aktif"
+          content="Creators +"
+          duration={1500}
+          classes="mx-auto" />
+      </div>
 </section>
 
 <!-- Client Page -->
