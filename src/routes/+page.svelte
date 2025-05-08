@@ -86,21 +86,28 @@
 </script>
 
 
-<!-- Hero Section -->
+<!-- ?Hero Section -->
 <section class="bg-linear-to-t from-primary-dark to-deep-400">
     <div class="max-w-screen-xl flex flex-col-reverse gap-10 px-4 py-16 mx-auto lg:flex-row lg:items-center lg:justify-between">
         <div class="lg:mb-0 lg:max-w-xl sr__hide" use:reveal={{preset: 'fade', duration: '2000'}}>
             <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white dark:text-white sm:text-5xl">
-                Clarity in Every Creation
+              Elevating Brands Through Visual Excellence
             </h1>
             <p class="mt-6 text-lg text-gray-300">
-                Agency digital yang siap membawa brand kamu ke level berikutnya dengan strategi dan desain yang impactful.
+              From immersive live streams to high-end content
+              production, we turn ideas into refined digital experiences
+              that connect, engage, and convert.
+              Kami bukan hanya tim kreatif, tapi mitra jangka panjang
+              dalam membentuk identitas visual yang berkelas dan
+              berdampak.
             </p>
-            <div class="mt-10 lg:mt-40 flex flex-wrap gap-1 text-white text-2xl">
-                <span class="animate-bounce">
-                    <ChevronsDown size="25"/>
-                </span> 
-                <p class="animate-bounce ">ScrollDown</p>
+              <div class="mt-10 lg:mt-40  gap-1 text-primary-dark text-2xl ">
+                <div class="bg-accent w-fit flex flex-row items-center py-3  px-5 rounded-full animate-bounce">
+                  <span class="">
+                      <ChevronsDown size="25" color="#930526"/>
+                  </span> 
+                  <p>ScrollDown</p>
+                </div>
               </div>
         </div>
 
