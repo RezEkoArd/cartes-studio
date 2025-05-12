@@ -15,29 +15,29 @@
     import profile1 from '$lib/assets/profile/profile1.jpg';
     import profile2 from '$lib/assets/profile/profile2.jpg';
     import profile3 from '$lib/assets/profile/profile3.jpg';
+    // Services
+    import { Music2, Instagram, Tv } from '@lucide/svelte';
+  import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
+    
+
 
 
     // Content Section Our Services
     let services = [
         {
-          title: "Brand Strategy",
-          description: "Membangun strategi brand kuat dan terarah agar bisnismu lebih dikenal dan dipercaya.",
-          icon: "🧠",
+          title: "Sosial Media Content  (TikTok)",
+          description: "Kami bantu bisnismu tampil beda di TikTok dengan konten yang viral, kreatif, dan relevan untuk audiens muda. Optimalkan reach dan engagement tanpa harus repot mikir ide setiap hari.",
+          icon: Music2,
         },
         {
-          title: "UI/UX Design",
-          description: "Desain antarmuka menarik dan user-friendly untuk meningkatkan engagement.responsive, dan SEO friendly dengan teknologi modern",
-          icon: "🎨",
+          title: "Sosial Media Content (Instagram)",
+          description: "Bangun kredibilitas dan visual brand kamu di Instagram lewat konten yang konsisten, estetis, dan terstruktur. Cocok untuk membangun komunitas dan menarik pelanggan ideal.",
+          icon: Instagram,
         },
         {
-          title: "Content Marketing",
-          description: "Strategi konten yang efektif untuk koneksi emosional dan konversi audiens.responsive, dan SEO friendly dengan teknologi modern",
-          icon: "✍️",
-        },
-        {
-          title: "Web Development",
-          description: "Membangun website cepat, responsive, dan SEO friendly dengan teknologi modern.responsive, dan SEO friendly dengan teknologi modern",
-          icon: "💻",
+          title: "Jasa Livestreaming",
+          description: "Tingkatkan penjualan dan interaksi real-time dengan layanan livestream profesional. Cocok untuk launching produk, promosi, atau sesi Q&A dengan audiensmu secara langsung.",
+          icon: Tv,
         }
       ];
 
@@ -65,12 +65,12 @@
 
     //Portofolio data dummy
     let portfolios = [
-    { title: "E-commerce Website",   category: "Web",     image: img1 },
-    { title: "Mobile Banking App",    category: "App",     image: img2 },
-    { title: "Brand Identity",        category: "Brand",   image: img6 },
-    { title: "Content Campaign",      category: "Content", image: img1 },
-    { title: "Landing Page Promo",    category: "Web",     image: img2 },
-    { title: "Social Media Kit",      category: "Content", image: img6 },
+    { title: "E-commerce Website",   category: "Tiktok",     image: img1 },
+    { title: "Mobile Banking App",    category: "Instagram",     image: img2 },
+    { title: "Brand Identity",        category: "Live Streaming",   image: img6 },
+    { title: "Content Campaign",      category: "Tiktok", image: img1 },
+    { title: "Landing Page Promo",    category: "Instagram",     image: img2 },
+    { title: "Social Media Kit",      category: "Live Streaming", image: img6 },
   ];
 
     // Build unique categories + "All"
@@ -178,7 +178,7 @@
     <p class="font-light text-md text-black mb-10">Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam melakukan Digital Marketing.</p>
     
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each services as service (service.title)}
           <div 
           class="relative p-8 h-[26rem] bg-gradient-to-br from-deep-400 via-deep-500 to-deep-400 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden"
@@ -186,11 +186,13 @@
         >
           <div class="flex flex-col items-start gap-4"> 
             <!-- Icon --> 
-            <div class="text-6xl text-accent drop-shadow-md">{service.icon}</div>
+            <div class="w-full text-6xl text-accent flex justify-center items-center gap-5">
+              <svelte:component this={service.icon} size="100" color="#ffffe7" />
+            </div>
         
             <!-- Title -->
-            <h3 class="text-2xl font-bold text-white leading-tight">{service.title}</h3>
-        
+            <h3 class="w-full text-2xl font-bold text-white leading-tight">{service.title}</h3>
+
             <!-- Description -->
             <p class="text-slate-300 text-sm mt-2 text-left">{service.description}</p>
           </div>
@@ -268,8 +270,12 @@
       <p class="text-primary-dark max-w-2xl mx-auto">Testimoni dari para klien kami yang telah mempercayakan project mereka kepada kami.</p>
     </div>
 
+    <!-- Component Testimonial -->
+    <TestimonialCarousel />
+
+
     <!-- Testimonial Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       {#each testimonials as testimonial}
         <div class="bg-primary-dark rounded-2xl p-6 shadow-lg hover:shadow-2xl transition duration-300 flex flex-col justify-between">
           <p class="text-slate-100 mb-6 italic">"{testimonial.quote}"</p>
@@ -286,6 +292,6 @@
           </div>
         </div>
       {/each}
-    </div>
+    </div> -->
   </div>
 </section>
