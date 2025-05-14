@@ -17,24 +17,25 @@
     import profile3 from '$lib/assets/profile/profile3.jpg';
     // Services
     import { Music2, Instagram, Tv } from '@lucide/svelte';
-  import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
+    import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
     
-
-
 
     // Content Section Our Services
     let services = [
         {
+          url: "tiktok",
           title: "Sosial Media Content  (TikTok)",
           description: "Kami bantu bisnismu tampil beda di TikTok dengan konten yang viral, kreatif, dan relevan untuk audiens muda. Optimalkan reach dan engagement tanpa harus repot mikir ide setiap hari.",
           icon: Music2,
         },
         {
+          url: "instagram",
           title: "Sosial Media Content (Instagram)",
           description: "Bangun kredibilitas dan visual brand kamu di Instagram lewat konten yang konsisten, estetis, dan terstruktur. Cocok untuk membangun komunitas dan menarik pelanggan ideal.",
           icon: Instagram,
         },
         {
+          url: "livestream",
           title: "Jasa Livestreaming",
           description: "Tingkatkan penjualan dan interaksi real-time dengan layanan livestream profesional. Cocok untuk launching produk, promosi, atau sesi Q&A dengan audiensmu secara langsung.",
           icon: Tv,
@@ -202,10 +203,10 @@
         
           <!-- Learn More -->
           <div class="mt-4">
-            <button class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold cursor-pointer">
+            <a href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
               Learn more
               <ChevronRight class="w-4 h-4" />
-            </button>
+            </a>
           </div>
         </div>    
       {/each}
@@ -273,25 +274,5 @@
     <!-- Component Testimonial -->
     <TestimonialCarousel />
 
-
-    <!-- Testimonial Cards -->
-    <!-- <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      {#each testimonials as testimonial}
-        <div class="bg-primary-dark rounded-2xl p-6 shadow-lg hover:shadow-2xl transition duration-300 flex flex-col justify-between">
-          <p class="text-slate-100 mb-6 italic">"{testimonial.quote}"</p>
-          <div class="flex items-center gap-4">
-            <img 
-              src={testimonial.image}
-              alt={testimonial.name}
-              class="w-14 h-14 rounded-full object-cover"
-            />
-            <div>
-              <h4 class="text-white font-bold">{testimonial.name}</h4>
-              <p class="text-white text-sm font-">{testimonial.position}</p>
-            </div>
-          </div>
-        </div>
-      {/each}
-    </div> -->
   </div>
 </section>
