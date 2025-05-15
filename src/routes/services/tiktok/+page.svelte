@@ -1,15 +1,15 @@
 <script>
     import { Music2, Instagram, Tv } from '@lucide/svelte';
     import UltraJaya  from '$lib/assets/logo-partner/Ultrajaya.svg';
-    import tiktok1  from '$lib/assets/portofolio/tiktok1.jpg';
-    import tiktok2  from '$lib/assets/portofolio/tiktok2.jpg';
-    import tiktok3  from '$lib/assets/portofolio/tiktok3.jpg';
-    import tiktok4  from '$lib/assets/portofolio/tiktok4.png';
-    import tiktok5  from '$lib/assets/portofolio/tiktok5.png';
-    import tiktok6  from '$lib/assets/portofolio/tiktok6.png';
-    import tiktok7  from '$lib/assets/portofolio/tiktok7.png';
-    import tiktok8  from '$lib/assets/portofolio/tiktok8.png';
-    import tiktok9  from '$lib/assets/portofolio/tiktok9.png';
+    import tiktok1  from '$lib/assets/portofolio/tiktok/tiktok1.jpg';
+    import tiktok2  from '$lib/assets/portofolio/tiktok/tiktok2.jpg';
+    import tiktok3  from '$lib/assets/portofolio/tiktok/tiktok3.jpg';
+    import tiktok4  from '$lib/assets/portofolio/tiktok/tiktok4.png';
+    import tiktok5  from '$lib/assets/portofolio/tiktok/tiktok5.png';
+    import tiktok6  from '$lib/assets/portofolio/tiktok/tiktok6.png';
+    import tiktok7  from '$lib/assets/portofolio/tiktok/tiktok7.png';
+    import tiktok8  from '$lib/assets/portofolio/tiktok/tiktok8.png';
+    import tiktok9  from '$lib/assets/portofolio/tiktok/tiktok9.png';
     import dAlba from '$lib/assets/logo-partner/dAlba.jpeg';
     import GBK from '$lib/assets/logo-partner/GBK-logo.jpeg';
 
@@ -162,7 +162,7 @@
     <h1 class="text-4xl md:text-5xl leading-tight tracking-wide">
       <span class="block uppercase text-base text-accent mb-2">cartes ID</span>
       <span class="block font-bold text-white">SOSIAL MEDIA CONTENT</span>
-      <span class="block font-light text-slate-300">INSTAGRAM</span>
+      <span class="block font-light text-slate-300">TIKTOK</span>
     </h1>
   </div>
 </section>
@@ -192,8 +192,8 @@
     <!-- Title and Logo Wrapper -->
     <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-300 pt-10">
         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-accent mb-4 md:mb-0 leading-tight">
-            <span class="block">OUR PORTOFOLIO</span>
-            <span class="block">INSTAGRAM REELS .</span>
+            <span class="block">OUR </span>
+            <span class="block">PORTOFOLIO TIKTOK .</span>
         </h2>
       <!-- Company Logo -->
       <img src={tiktok.portfolio.find(p => p.partner === "UltraJaya").logo} alt="Company Logo" class="h-10 md:h-30 md:pr-5" />
@@ -225,8 +225,8 @@
     <!-- Title and Logo Wrapper -->
     <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-100 pt-10">
         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-deep-400 mb-4 md:mb-0 leading-tight">
-            <span class="block">OUR PORTOFOLIO</span>
-            <span class="block">INSTAGRAM REELS .</span>
+            <span class="block">OUR</span>
+            <span class="block">PORTOFOLIO TIKTOK .</span>
         </h2>
       <!-- Company Logo -->
       <img src={tiktok.portfolio.find(p => p.partner === "Dalba").logo} alt="Company Logo" class="h-10 md:h-30 md:pr-5" />
@@ -259,8 +259,8 @@
     <!-- Title and Logo Wrapper -->
     <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-300 pt-10">
         <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold text-accent mb-4 md:mb-0 leading-tight">
-            <span class="block">OUR PORTOFOLIO</span>
-            <span class="block">INSTAGRAM REELS .</span>
+            <span class="block">OUR </span>
+            <span class="block">PORTOFOLIO TIKTOK .</span>
         </h2>
       <!-- Company Logo -->
       <img src={tiktok.portfolio.find(p => p.partner === "Gbk").logo} alt="Company Logo" class="h-10 md:h-30 md:pr-5" />
@@ -268,7 +268,6 @@
 </section>
 
 <!-- Pricelist -->
-
 <section class="max-w-full mx-auto px-6 py-16 space-y-12"
 style="background-image: url('/background/bg-2.jpg'); object-fit: cover;">
   <h2 class="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-accent mb-12">

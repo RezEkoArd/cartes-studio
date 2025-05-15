@@ -7,7 +7,7 @@
 
 </script>
 
-<section class="bg-deep-500 min-h-screen py-20 px-6 flex items-center justify-center">
+<section class="bg-deep-400 min-h-screen py-20 px-6 flex items-center justify-center">
     <div class="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-16 ">
       
       <!-- Kiri: Info Kontak -->
@@ -28,7 +28,7 @@
                 </span>
                 Phone:
             </p>
-            <p class="text-slate-100 font-light text-sm">0851-8666-5256</p>
+            <p class="text-slate-100 font-light text-sm">0878 8987 5535</p>
           </div>
   
           <div>

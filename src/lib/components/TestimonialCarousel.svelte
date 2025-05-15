@@ -52,7 +52,7 @@
     let embla;
     const options = { 
         loop: true,
-        align: 'start',
+        align: 'end',
         containScroll: 'trimSnaps'
     };
     const plugins = [Autoplay({ delay: 2000 })];
