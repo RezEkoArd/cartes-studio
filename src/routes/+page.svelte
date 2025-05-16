@@ -203,7 +203,7 @@
         
           <!-- Learn More -->
           <div class="mt-4">
-            <a data-sveltekit-preload-data="hover" href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
+            <a data-sveltekit-preload-data="" href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
               Learn more
               <ChevronRight class="w-4 h-4" />
             </a>

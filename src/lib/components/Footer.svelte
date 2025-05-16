@@ -8,7 +8,10 @@
           <span class="text-xl font-bold text-white">Cartes ID</span>
         </div>
         <p class="text-sm text-gray-300">
-          Kami bantu brand kamu tampil menonjol dengan strategi digital dan desain yang impactful.
+          Kami bukan hanya tim kreatif, tapi mitra jangka panjang
+          dalam membentuk identitas visual yang berkelas dan
+          berdampak.
+             
         </p>
       </div>
   
@@ -17,9 +20,9 @@
         <h3 class="text-lg font-semibold mb-3">Navigasi</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
           <li><a href="/" class="hover:text-white">Home</a></li>
-          <li><a href="/about" class="hover:text-white">About</a></li>
-          <li><a href="/service" class="hover:text-white">Services</a></li>
-          <li><a href="/blog" class="hover:text-white">Blog</a></li>
+          <li><a href="/#about" class="hover:text-white">About</a></li>
+          <li><a href="/#service" class="hover:text-white">Services</a></li>
+          <!-- <li><a href="/blog" class="hover:text-white">Blog</a></li> -->
         </ul>
       </div>
   
@@ -27,9 +30,9 @@
       <div>
         <h3 class="text-lg font-semibold mb-3">Follow Us</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
-          <li><a href="/" class="hover:text-white">Instagram</a></li>
+          <li><a href="https://www.instagram.com/cartestudio.id/" target="_blank" class="hover:text-white">Instagram</a></li>
           <li><a href="/" class="hover:text-white">TikTok</a></li>
-          <li><a href="/" class="hover:text-white">LinkedIn</a></li>
+          <!-- <li><a href="/" class="hover:text-white">LinkedIn</a></li> -->
         </ul>
       </div>
   
@@ -38,8 +41,8 @@
         <h3 class="text-lg font-semibold mb-3">Contact</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
           <li>Email: info@cartes.id</li>
-          <li>Phone: +62 812 3456 7890</li>
-          <li>Location: Jakarta, Indonesia</li>
+          <li>Phone: +62 878 8987 5535</li>
+          <li>Location: Tangerang, Indonesia</li>
         </ul>
       </div>
     </div>

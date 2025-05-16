@@ -28,7 +28,7 @@
                 </span>
                 Phone:
             </p>
-            <p class="text-slate-100 font-light text-sm">0878 8987 5535</p>
+            <p class="text-slate-100 font-light text-sm">+62 878 8987 5535</p>
           </div>
   
           <div>
