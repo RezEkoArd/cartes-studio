@@ -159,7 +159,7 @@
         </div>
 
         <div class="lg:w-1/2 " >
-            <img src={Hero} alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
+            <img src={Hero} loading="lazy" img alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
         </div>
     </div>
 </section>
@@ -249,7 +249,7 @@
         
           <!-- Learn More -->
           <div class="mt-4">
-            <a data-sveltekit-preload-data="" href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
+            <a data-sveltekit-preload-data="hover" href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
               Learn more
               <ChevronRight class="w-4 h-4" />
             </a>
@@ -291,6 +291,7 @@
       {#each filtered as portfolio (portfolio.title)}
         <div class="bg-accent rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-300 group">
           <img 
+          loading="lazy"
             src={portfolio.image} 
             alt={portfolio.title} 
             class="w-full h-100 aspect-9/16 object-cover group-hover:scale-105 transition-transform duration-500"
@@ -298,7 +299,7 @@
           <div class="p-5 flex flex-col gap-2">
             <h3 class="text-primary-dark text-xl font-bold">{portfolio.title}</h3>
             <p class="text-deep-300 text-sm">{portfolio.category}</p>
-            <a href={portfolio.link} target="_blank" class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">
+            <a data-sveltekit-preload-code="hover" href={portfolio.link} target="_blank" class=" w-full mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm  font-semibold mx-auto block text-center hover:underline">
               View Project
             </a>
           </div>
