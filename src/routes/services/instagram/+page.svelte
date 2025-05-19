@@ -240,13 +240,13 @@
                 <span class="block">FEED .</span>
             </h1>
             <p class="mt-6 text-2xl text-gray-800">
-                https://www.instagram.com/miebar.id/
+              https://www.instagram.com/zeintin.official/
             </p>
 
         </div>
 
         <div class="lg:w-1/2 " >
-            <img src={Feed1} alt="insta-feed" class="w-full max-h-[800px] rounded-lg shadow-lg sr__hide" >
+            <img src={Feed2} alt="insta-feed" class="w-full max-h-[800px] rounded-lg shadow-lg sr__hide" >
         </div>
     </div>
   </section>
@@ -254,7 +254,7 @@
 
 <!-- Pricelist -->
 <section class="max-w-full mx-auto px-6 py-16 space-y-12"
-style="background-image: url('/background/bg-3.jpg'); object-fit: contain;">
+style="background-image: url('/background/bg-2.jpg'); object-fit: contain;">
   <h2 class="text-center text-2xl sm:text-3xl md:text-5xl font-bold text-accent mb-12">
     Paket Layanan TikTok Kami
   </h2>

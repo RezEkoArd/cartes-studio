@@ -15,6 +15,15 @@
     import profile1 from '$lib/assets/profile/profile1.jpg';
     import profile2 from '$lib/assets/profile/profile2.jpg';
     import profile3 from '$lib/assets/profile/profile3.jpg';
+    // Portofolio
+    import porto1 from '$lib/assets/portofolio/tiktok/tiktok1.jpg';
+    import porto2 from '$lib/assets/portofolio/tiktok/tiktok6.png';
+    import porto3 from '$lib/assets/portofolio/tiktok/tiktok8.png';
+    import porto4 from '$lib/assets/portofolio/instagram/reels3.jpg';
+    import porto5 from '$lib/assets/portofolio/instagram/reels4.jpg';
+    import porto6 from '$lib/assets/portofolio/instagram/Feed1.jpg';
+    import porto7 from '$lib/assets/portofolio/instagram/Feed2.jpg';
+
     // Services
     import { Music2, Instagram, Tv } from '@lucide/svelte';
     import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
@@ -66,13 +75,50 @@
 
     //Portofolio data dummy
     let portfolios = [
-    { title: "E-commerce Website",   category: "Tiktok",     image: img1 },
-    { title: "Mobile Banking App",    category: "Instagram",     image: img2 },
-    { title: "Brand Identity",        category: "Live Streaming",   image: img6 },
-    { title: "Content Campaign",      category: "Tiktok", image: img1 },
-    { title: "Landing Page Promo",    category: "Instagram",     image: img2 },
-    { title: "Social Media Kit",      category: "Live Streaming", image: img6 },
-  ];
+  {
+    title: "UltraJaya • @ultrasquad.id",
+    category: "Tiktok",
+    image: porto1,
+    link: "https://www.tiktok.com/@ultrasquad.id/video/7467916938686008584"
+  },
+  {
+    title: "D'Alba • @dalba_indonesia",
+    category: "Tiktok",
+    image: porto2,
+    link: "https://www.tiktok.com/@dalba_indonesia/video/7434701517438848311"
+  },
+  {
+    title: "GBK • love_gbk",
+    category: "Tiktok",
+    image: porto3,
+    link: "https://www.tiktok.com/@love_gbk/video/7183960937085390107"
+  },
+  {
+    title: "GBK • @love_gbk",
+    category: "Instagram Reels",
+    image: porto4,
+    link: "https://www.instagram.com/reel/DCO_em6yCed/"
+  },
+  {
+    title: "GBK • @peavolk",
+    category: "Instagram Reels",
+    image: porto5,
+    link: "https://www.instagram.com/reel/C_cbPaMyhkr/"
+  },
+  {
+    title: "Miebar • @miebar.id",
+    category: "Instagram Content",
+    image: porto6,
+    link: "https://www.instagram.com/miebar.id/"
+  },
+  {
+    title: "Zeintin • @zeintin.official",
+    category: "Instagram Content",
+    image: porto7,
+    link: "https://www.instagram.com/zeintin.official/"
+  }
+];
+
 
     // Build unique categories + "All"
     let categories = ["All", ...new Set(portfolios.map(p => p.category))];
@@ -247,14 +293,14 @@
           <img 
             src={portfolio.image} 
             alt={portfolio.title} 
-            class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-500"
+            class="w-full h-100 aspect-9/16 object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div class="p-5 flex flex-col gap-2">
             <h3 class="text-primary-dark text-xl font-bold">{portfolio.title}</h3>
             <p class="text-deep-300 text-sm">{portfolio.category}</p>
-            <button class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">
+            <a href={portfolio.link} target="_blank" class="mt-2 bg-deep-400 p-2 rounded-xl text-accent text-sm font-semibold hover:underline">
               View Project
-            </button>
+            </a>
           </div>
         </div>
       {/each}
