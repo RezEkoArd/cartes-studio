@@ -34,7 +34,7 @@
 <div use:animationScroll class="{classes} border-2 w-[300px] h-[200px] flex justify-center items-center flex-col border-primary-dark rounded-lg p-6 text-center transition-all duration-300 hover:scale-105">
     <p class="text-gray-800 text-md font-medium" class:label> {label} </p>
     <div class="text-6xl font-bold text-primary-dark mb-2">
-        {format ? formatter.format(Math.floor($count)) : Math.floor($count)}
+        {format ? formatter.format(Math.floor($count)) : Math.floor($count)} +
     </div>
     <p class="text-slate-800 text-2xl font-semibold">{content}</p>
 </div>

@@ -11,7 +11,7 @@
 </script>
 
 <div class="overflow-hidden" use:emblaCarouselSvelte="{{ options, plugins }}">
-  <div class=" flex">
+  <div class="flex h-]">
     <div class="embla__slide">
       <img src={slide1} alt="slide-1" class="aspect-video w-full max-w-md md:max-w-3xl lg:max-w-4xl mx-auto object-cover rounded-lg" loading="lazy">
     </div>
@@ -29,7 +29,7 @@
 
   .embla__slide {
     flex: 0 0 100%;
-    min-width: 20rem;
+    width: 20rem;
 
   }
 </style>

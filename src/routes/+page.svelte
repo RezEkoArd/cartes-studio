@@ -27,8 +27,24 @@
     // Services
     import { Music2, Instagram, Tv } from '@lucide/svelte';
     import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
-    
 
+    // data Why Choose us
+    const features = [
+    {
+      title: "End-to-End Service",
+      description: "Dari strategi hingga eksekusi — kami menangani semua kebutuhan digital Anda."
+    },
+    {
+      title: "Content that Converts",
+      description: "Fokus pada konten yang bukan hanya menarik, tapi membentuk identitas visual yang berkelas dan berdampak."
+    },
+    {
+      title: "Agile & Scalable",
+      description: "Cocok untuk brand baru hingga korporasi — kami siap tumbuh bersama Anda."
+    }
+  ];
+
+  
     // Content Section Our Services
     let services = [
         {
@@ -166,37 +182,53 @@
 
 
 <!-- About me -->
-<section id="aboutme" class="bg-accent">
-    <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto lg:flex lg:items-center lg:justify-between">
-        <h1 class="font-extrabold text-4xl text-primary" use:reveal={{y: 100, duration: '2000'}}>Why us</h1>
-
-        <div use:reveal={{y: 100, duration: '2000'}}>
-            <EmblaAutoPlay class="bg-primary-light w-full h-20"/>
-        </div>
-
-        <p class="font-normal text-xl lg:text-center lg:text-3xl leading-6 lg:leading-10 lg:font-medium text-gray-900 antialiased" use:reveal={{preset: 'fade',x: 100, duration: '2000'}}>Cartes.id adalah partner strategis brand Anda dalam membangun, mengelola, dan mengembangkan
-            aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital</p>
+<section id="aboutme" class="bg-accent py-12 text-center">
+    <div class="max-w-3xl mx-auto mb-10 px-4">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800" use:reveal={{preset: 'fade', duration: '3000'}}>
+        Why Choose Cartes.id?
+      </h2>
+      <p class="text-gray-500 leading-relaxed" use:reveal={{preset: 'fade',y: 100, duration: '1000'}}>
+        Cartes.id adalah partner strategis brand Anda dalam membangun, mengelola, dan mengembangkan aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital.
+      </p>
     </div>
 
-      <div class="w-3/4 mx-auto flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4" use:reveal={{preset: 'fade',y: 100, duration: '1000'}}>
+      {#each features as feature}
+        <div class="bg-primary-dark shadow-xl p-6 rounded-xl transition-all hover:shadow-2xl">
+          <!-- Title -->
+          <h3 class="text-lg font-semibold mb-3 text-gray-100">
+            {feature.title}
+          </h3>
+          
+          <!-- Description -->
+          <p class="text-gray-300 text-sm leading-relaxed">
+            {feature.description}
+          </p>
+
+          
+        </div>
+      {/each}
+    </div>
+
+      <div class="w-3/4 mx-auto mt-10 flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
           <AnimatedNumber
-          target={50}
-          label="Toko Aktif"
-          content="Creators +"
+          target={5000}
+          label="Connect to"
+          content="Passionate Creators "
           duration={1500}
           classes="mx-auto" />
 
           <AnimatedNumber
-          target={1000}
-          label="Toko Aktif"
-          content="Creators +"
+          target={20}
+          label="Partnering With"
+          content="Brands & SMEs "
           duration={1500}
           classes="mx-auto" />
 
           <AnimatedNumber
-          target={500}
-          label="Toko Aktif"
-          content="Creators +"
+          target={30}
+          label="Expanding to"
+          content="Content Niches"
           duration={1500}
           classes="mx-auto" />
       </div>
