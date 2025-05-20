@@ -39,9 +39,9 @@
                 Address:
             </p>
             <p class="text-slate-100 font-light text-sm">
-              Gedung Butik C, Bella, Terra Lifestyle Center,<br/>
-              Jl. Boulevard Raya No.1, Klp. Gading Tim.,<br/>
-              Jkt Utara, Jakarta 14240
+
+              Jl. Gelatik VI No.1 blok G7, Pd. Kacang Tim.,<br/>
+              Pd. Aren, Kota Tangerang Selatan, Banten 15226
             </p>
           </div>
         </div>

@@ -5,13 +5,8 @@
     import {reveal} from 'svelte-reveal';
     import Hero from "$lib/assets/hero.png";
     import EmblaAutoPlay from '$lib/components/EmblaAutoPlay.svelte';
-    import Google from "$lib/assets/logo-partner/google.png";
     import Shopee from "$lib/assets/logo-partner/shopee-logo.png";
-    import Twitch from "$lib/assets/logo-partner/twitch-logo.png";
-    import Fiver from "$lib/assets/logo-partner/fiver-logo.png";
-    import img1 from '$lib/assets/img1.jpg';
-    import img2 from '$lib/assets/img2.jpg';
-    import img6 from '$lib/assets/img6.jpg';
+    import Tiktok from "$lib/assets/logo-partner/TikTok_logo.png";
     import profile1 from '$lib/assets/profile/profile1.jpg';
     import profile2 from '$lib/assets/profile/profile2.jpg';
     import profile3 from '$lib/assets/profile/profile3.jpg';
@@ -26,7 +21,7 @@
 
     // Services
     import { Music2, Instagram, Tv } from '@lucide/svelte';
-    import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
+    import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte'; 
 
     // data Why Choose us
     const features = [
@@ -184,7 +179,7 @@
 <!-- About me -->
 <section id="aboutme" class="bg-accent py-12 text-center">
     <div class="max-w-3xl mx-auto mb-10 px-4">
-      <h2 class="text-2xl font-bold mb-6 text-gray-800" use:reveal={{preset: 'fade', duration: '3000'}}>
+      <h2 class="text-2xl font-extrabold mb-6 text-primary-dark" use:reveal={{preset: 'fade', duration: '3000'}}>
         Why Choose Cartes.id?
       </h2>
       <p class="text-gray-500 leading-relaxed" use:reveal={{preset: 'fade',y: 100, duration: '1000'}}>
@@ -237,13 +232,11 @@
 <!-- Client Page -->
 <section  class="bg-primary-dark">
     <div class="max-w-screen-xl flex flex-col gap-10 px-4 py-16 mx-auto">
-      <h1 class="font-extrabold text-4xl text-accent text-center mb-10">Proudly Featured In</h1>
+      <h1 class="font-extrabold text-4xl text-accent text-center mb-10">Official Partner</h1>
   
-      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 place-items-center w-full">
-        <img src={Google} alt="Google" class="w-40 h-auto object-contain" />
-        <img src={Shopee} alt="Shopee" class="w-40 h-auto object-contain" />
-        <img src={Fiver} alt="Fiver" class="w-40 h-auto object-contain" />
-        <img src={Twitch} alt="Twitch" class="w-40 h-auto object-contain" />
+      <div class="flex justify-around items-center gap-6 w-full">
+        <img src={Tiktok} alt="Google" class="w-40 h-auto py-2 object-contain" />
+        <img src={Shopee} alt="Shopee" class="w-40 h-auto py-2 object-contain" />
       </div>
     </div>
 </section>
