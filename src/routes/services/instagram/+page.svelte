@@ -7,7 +7,6 @@
     import reels6 from '$lib/assets/portofolio/instagram/reels6.jpg';
     import GBK from '$lib/assets/logo-partner/GBK-logo.jpeg';
     import Peavolk from '$lib/assets/logo-partner/peavolk.jpeg';
-    import img1 from '$lib/assets/img1.jpg';
     import Feed1 from '$lib/assets/portofolio/instagram/Feed1.jpg';
     import Feed2 from '$lib/assets/portofolio/instagram/Feed2.jpg';
 

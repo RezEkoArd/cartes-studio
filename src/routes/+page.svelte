@@ -179,6 +179,7 @@
 <!-- About me -->
 <section id="aboutme" class="bg-accent py-12 text-center">
     <div class="max-w-3xl mx-auto mb-10 px-4">
+
       <h2 class="text-2xl font-extrabold mb-6 text-primary-dark" use:reveal={{preset: 'fade', duration: '3000'}}>
         Why Choose Cartes.id?
       </h2>
