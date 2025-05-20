@@ -4,7 +4,7 @@
     import reels3 from '$lib/assets/portofolio/instagram/reels3.jpg';
     import reels4 from '$lib/assets/portofolio/instagram/reels4.jpg';
     import reels5 from '$lib/assets/portofolio/instagram/reels5.jpg';
-    import reels6 from '$lib/assets/portofolio/instagram/reels6.jpg';
+    import reel6 from '$lib/assets/portofolio/instagram/instagramreel.jpg';
     import GBK from '$lib/assets/logo-partner/GBK-logo.jpeg';
     import Peavolk from '$lib/assets/logo-partner/peavolk.jpeg';
     import Feed1 from '$lib/assets/portofolio/instagram/Feed1.jpg';
@@ -44,7 +44,7 @@
                 url: "https://www.instagram.com/reel/C_cbPaMyhkr/"
                 },
                 {
-                image: reels6,
+                image: reel6,
                 url: "https://www.instagram.com/reel/C_cbPaMyhkr/"
                 }
             ]
