@@ -27,32 +27,6 @@
             ]
         },
         {
-            name: "Studio Package Silver",
-            price: "Rp20.000.000",
-            remarks: [
-            "180 Hours total (30 livestream sessions @ 6 hours/day)",
-            "2 Hosts",
-            "Creative content & time plan",
-            "Digital asset creation",
-            "1 Account Executive",
-            "TikTok Shop account management",
-            "Monthly reporting",
-            "iPhone 15",
-            "2 Lighting Godox",
-            "1 Host/frame",
-            "Cartes Studio Properties / Digital Asset",
-            "Livestream Assistant",
-            "SV LS Reminder: 7 contents/month"
-            ],
-            services: [
-            "TikTok / Other Platform Live Commerce",
-            "Creative Strategy Development",
-            "Live Streaming Strategy & Production",
-            "Service Management",
-            "Inventory"
-            ]
-        },
-        {
             name: "Studio Package Gold",
             price: "Rp45.000.000",
             remarks: [
@@ -78,7 +52,34 @@
             "Service Management",
             "Inventory"
             ]
+        },
+        {
+            name: "Studio Package Silver",
+            price: "Rp20.000.000",
+            remarks: [
+            "180 Hours total (30 livestream sessions @ 6 hours/day)",
+            "2 Hosts",
+            "Creative content & time plan",
+            "Digital asset creation",
+            "1 Account Executive",
+            "TikTok Shop account management",
+            "Monthly reporting",
+            "iPhone 15",
+            "2 Lighting Godox",
+            "1 Host/frame",
+            "Cartes Studio Properties / Digital Asset",
+            "Livestream Assistant",
+            "SV LS Reminder: 7 contents/month"
+            ],
+            services: [
+            "TikTok / Other Platform Live Commerce",
+            "Creative Strategy Development",
+            "Live Streaming Strategy & Production",
+            "Service Management",
+            "Inventory"
+            ]
         }
+        
         ]
     }
 
@@ -152,7 +153,7 @@ style="background-image: url('/background/bg-2.jpg')"
 </section>
 
 <!-- Pricelist Component -->
-<section class="min-h-screen bg py-20 px-4 sm:px-6 lg:px-8" style="background-image: url('/background/bg-4.jpg'); object-fit: contain;">
+<section class="min-h-screen bg py-20 px-4 sm:px-6 lg:px-8" style="background-image: url('/background/bg-5.jpg'); object-fit: contain;">
     <div class="max-w-7xl mx-auto">
       <!-- Header Section -->
       <div class="text-center mb-16">
@@ -163,9 +164,9 @@ style="background-image: url('/background/bg-2.jpg')"
       <!-- Pricing Grid -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         {#each livestream.packages as pkg}
-          <div class="relative bg-white/5 backdrop-blur-xl rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
+          <div class="relative bg-white/1 backdrop-blur-xl rounded-2xl p-8 border border-white/10 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl">
             <!-- Ribbon for Popular -->
-            {#if pkg.name.includes('Silver')}
+            {#if pkg.name.includes('Gold')}
               <div class="absolute -top-4 right-6 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg">
                 Most Popular
               </div>

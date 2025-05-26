@@ -3,8 +3,7 @@
     import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	  import {ChevronRight, ChevronsDown} from '@lucide/svelte';
     import {reveal} from 'svelte-reveal';
-    import Hero from "$lib/assets/hero.png";
-    import EmblaAutoPlay from '$lib/components/EmblaAutoPlay.svelte';
+    import Hero from "$lib/assets/hero.jpg";
     import Shopee from "$lib/assets/logo-partner/shopee-logo.png";
     import Tiktok from "$lib/assets/logo-partner/TikTok_logo.png";
     import profile1 from '$lib/assets/profile/profile1.jpg';
@@ -20,9 +19,9 @@
     import porto7 from '$lib/assets/portofolio/instagram/Feed2.jpg';
 
     // Services
-    import { Music2, Instagram, Tv } from '@lucide/svelte';
+    import { Music2, Instagram, Tv, Codesandbox } from '@lucide/svelte';
     import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte'; 
-
+    // import {TreeD} from '$lib/assets/3d.png';
     // data Why Choose us
     const features = [
     {
@@ -50,7 +49,7 @@
         },
         {
           url: "instagram",
-          title: "Sosial Media Content (Instagram)",
+          title: "SosMed Content (Instagram)",
           description: "Bangun kredibilitas dan visual brand kamu di Instagram lewat konten yang konsisten, estetis, dan terstruktur. Cocok untuk membangun komunitas dan menarik pelanggan ideal.",
           icon: Instagram,
         },
@@ -59,6 +58,12 @@
           title: "Jasa Livestreaming",
           description: "Tingkatkan penjualan dan interaksi real-time dengan layanan livestream profesional. Cocok untuk launching produk, promosi, atau sesi Q&A dengan audiensmu secara langsung.",
           icon: Tv,
+        },
+        {
+          url: "3danimation",
+          title: "3D Animation",
+          description: "Hidupkan ide dan produkmu dengan animasi 3D yang memukau. Cocok untuk kebutuhan branding, presentasi visual, hingga konten promosi yang menarik dan dinamis.",
+          icon: Codesandbox,
         }
       ];
 
@@ -133,7 +138,7 @@
 
     // Build unique categories + "All"
     let categories = ["All", ...new Set(portfolios.map(p => p.category))];
-  let active = "All";
+    let active = "All";
 
   // Reactive filtered list
   $: filtered = active === "All"
@@ -209,14 +214,14 @@
       <div class="w-3/4 mx-auto mt-10 flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
           <AnimatedNumber
           target={5000}
-          label="Connect to"
-          content="Passionate Creators "
+          label="Streaming Time"
+          content="Hours "
           duration={1500}
           classes="mx-auto" />
 
           <AnimatedNumber
-          target={20}
-          label="Partnering With"
+          target={50}
+          label="Trusted by Client"
           content="Brands & SMEs "
           duration={1500}
           classes="mx-auto" />
@@ -251,9 +256,9 @@
     <p class="font-light text-md text-black mb-10">Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam melakukan Digital Marketing.</p>
     
 
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {#each services as service (service.title)}
-          <div 
+          <a data-sveltekit-preload-data="hover" href="/services/{service.url}"  
           class="relative p-8 h-[26rem] bg-gradient-to-br from-deep-400 via-deep-500 to-deep-400 rounded-3xl shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between overflow-hidden"
           use:reveal={{ y: 50, duration: 700 }}
         >
@@ -275,12 +280,12 @@
         
           <!-- Learn More -->
           <div class="mt-4">
-            <a data-sveltekit-preload-data="hover" href="/services/{service.url}" class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
+            <p class="flex items-center gap-2 text-accent hover:text-white transition-colors duration-300 text-sm font-semibold">
               Learn more
               <ChevronRight class="w-4 h-4" />
-            </a>
+            </p>
           </div>
-        </div>    
+        </a>    
       {/each}
     </div>
   </div>
