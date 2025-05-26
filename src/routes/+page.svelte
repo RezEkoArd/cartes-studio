@@ -175,7 +175,7 @@
         </div>
 
         <div class="lg:w-1/2 " >
-            <img src={Hero} loading="lazy" img alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
+            <img src={LogoHero} loading="lazy" img alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
         </div>
     </div>
 </section>
