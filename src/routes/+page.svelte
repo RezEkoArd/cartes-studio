@@ -3,7 +3,7 @@
     import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	  import {ChevronRight, ChevronsDown} from '@lucide/svelte';
     import {reveal} from 'svelte-reveal';
-    import Hero from "$lib/assets/hero.jpg";
+    import LogoHero from "$lib/assets/LogoHero.jpg";
     import Shopee from "$lib/assets/logo-partner/shopee-logo.png";
     import Tiktok from "$lib/assets/logo-partner/TikTok_logo.png";
     import profile1 from '$lib/assets/profile/profile1.jpg';
