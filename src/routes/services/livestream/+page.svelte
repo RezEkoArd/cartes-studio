@@ -153,7 +153,7 @@ style="background-image: url('/background/bg-2.jpg')"
 </section>
 
 <!-- Pricelist Component -->
-<section class="min-h-screen bg py-20 px-4 sm:px-6 lg:px-8" style="background-image: url('/background/bg-5.jpg'); object-fit: contain;">
+<section class="min-h-screen bg py-20 px-4 sm:px-6 lg:px-8" style="background-image: url('/background/bg-6.jpg'); object-fit: contain;">
     <div class="max-w-7xl mx-auto">
       <!-- Header Section -->
       <div class="text-center mb-16">
