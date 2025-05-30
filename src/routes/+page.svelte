@@ -1,7 +1,7 @@
 <script>
 	  import {ChevronRight, ChevronsDown} from '@lucide/svelte';
     import {reveal} from 'svelte-reveal';
-    import LogoHero from "$lib/assets/LogoHero.jpg";
+    import LogoHero from "$lib/assets/LogoHero.webp";
     import Shopee from "$lib/assets/logo-partner/shopee-logo.png";
     import Tiktok from "$lib/assets/logo-partner/TikTok_logo.png";
     import profile1 from '$lib/assets/profile/profile1.jpg';
@@ -161,36 +161,56 @@ import { onMount } from 'svelte';
     : portfolios.filter(p => p.category === active);
 </script>
 
+<!--? Preload gambar hero -->
+<svelte:head>
+    <!-- Preload gambar hero -->
+    <link rel="preload" href={LogoHero} as="image" fetchpriority="high">
+  
+    <!-- Preconnect ke domain yang diperlukan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</svelte:head>
+
 
 <!-- ?Hero Section -->
 <section class="bg-linear-to-t from-primary-dark to-deep-400">
-    <div class="max-w-screen-xl flex flex-col-reverse gap-10 px-4 py-16 mx-auto lg:flex-row lg:items-center lg:justify-between">
-        <div class="lg:mb-0 lg:max-w-xl sr__hide" use:reveal={{preset: 'fade', duration: '2000'}}>
-            <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white dark:text-white sm:text-5xl">
-              Elevating Brands Through Visual Excellence
-            </h1>
-            <p class="mt-6 text-lg text-gray-300">
-              From immersive live streams to high-end content
-              production, we turn ideas into refined digital experiences
-              that connect, engage, and convert.
-              Kami bukan hanya tim kreatif, tapi mitra jangka panjang
-              dalam membentuk identitas visual yang berkelas dan
-              berdampak.
-            </p>
-              <div class="mt-10 lg:mt-40  gap-1 text-primary-dark text-2xl ">
-                <div class="bg-accent w-fit flex flex-row items-center py-3  px-5 rounded-full animate-bounce">
-                  <span class="">
-                      <ChevronsDown size="25" color="#930526"/>
-                  </span> 
-                  <p>ScrollDown</p>
-                </div>
-              </div>
+  <div class="max-w-screen-xl flex flex-col-reverse gap-10 px-4 py-16 mx-auto lg:flex-row lg:items-center lg:justify-between">
+    <div class="lg:mb-0 lg:max-w-xl sr__hide" use:reveal={{preset: 'fade', duration: '2000'}}>
+      <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-white dark:text-white sm:text-5xl">
+        Elevating Brands Through Visual Excellence
+      </h1>
+      <p class="mt-6 text-lg text-gray-300">
+        From immersive live streams to high-end content production, we turn ideas into refined digital experiences that connect, engage, and convert.
+        Kami bukan hanya tim kreatif, tapi mitra jangka panjang dalam membentuk identitas visual yang berkelas dan berdampak.
+      </p>
+      <div class="mt-10 lg:mt-40 gap-1 text-primary-dark text-2xl">
+        <div class="bg-accent w-fit flex flex-row items-center py-3 px-5 rounded-full animate-bounce">
+          <span>
+            <ChevronsDown size="25" color="#930526"/>
+          </span> 
+          <p>ScrollDown</p>
         </div>
-
-        <div class="lg:w-1/2 " >
-            <img src={LogoHero} loading="lazy" decoding="async" alt="Cartes Studio - Professional Digital Marketing and Content Creation Services" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
-        </div>
+      </div>
     </div>
+
+    <!-- Optimasi gambar hero -->
+    <div class="lg:w-1/2 relative aspect-[16/9]">
+      <!-- Placeholder untuk menghindari layout shift -->
+      <!-- <div class="absolute inset-0 bg-deep-500 rounded-lg shadow-lg animate-pulse"></div> -->
+      
+      <!-- Gambar utama -->
+      <img 
+        src={LogoHero}
+        alt="Cartes Studio - Professional Digital Marketing and Content Creation Services"
+        class="w-full h-full rounded-lg shadow-lg sr__hide object-cover"
+        use:reveal
+        fetchpriority="high"
+        decoding="async"
+        width="1200"
+        height="675"
+      />
+    </div>
+  </div>
 </section>
 
 
