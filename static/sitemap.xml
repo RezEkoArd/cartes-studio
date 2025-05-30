@@ -3,5 +3,37 @@
   <url>
     <loc>https://cartesstudio.com/</loc>
     <priority>1.0</priority>
+    <changefreq>weekly</changefreq>
+    <lastmod>2025-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://cartesstudio.com/services</loc>
+    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://cartesstudio.com/services/tiktok</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://cartesstudio.com/services/instagram</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://cartesstudio.com/services/livestream</loc>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+    <lastmod>2025-05-30</lastmod>
+  </url>
+  <url>
+    <loc>https://cartesstudio.com/contact</loc>
+    <priority>0.6</priority>
+    <changefreq>yearly</changefreq>
+    <lastmod>2025-05-30</lastmod>
   </url>
 </urlset>

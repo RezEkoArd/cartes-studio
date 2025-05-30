@@ -309,10 +309,10 @@ style="background-image: url('/background/bg-2.jpg'); object-fit: contain;">
 
       <!-- Button -->
       <div class="pt-6">
-        <button class="w-full py-3 bg-primary/90 hover:bg-primary border border-primary/50 rounded-xl font-semibold transition-all 
+        <a href="/contact"  class="w-full py-3 bg-primary/90 hover:bg-primary border border-primary/50 rounded-xl font-semibold transition-all 
                    duration-300 hover:shadow-lg hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary/50">
           Chat Sekarang
-        </button>
+        </a>
       </div>
     </div>
   </div>

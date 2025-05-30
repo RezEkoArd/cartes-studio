@@ -211,10 +211,10 @@ style="background-image: url('/background/bg-2.jpg')"
   
             <!-- CTA Button -->
             <div class="mt-8">
-              <button class="w-full py-3 bg-primary hover:bg-deep-500 text-white font-semibold rounded-lg transition-all 
+              <a href="/contact" class="w-full py-3 px-4 bg-primary hover:bg-deep-500 text-white font-semibold rounded-lg transition-all 
                         duration-300 transform hover:scale-[1.02] shadow-lg hover:shadow-emerald-500/20">
                 Pilih Paket
-              </button>
+              </a>
             </div>
           </div>
         {/each}

@@ -1,6 +1,4 @@
 <script>
-	import Accordion from './../lib/components/Accordion.svelte';
-    import AnimatedNumber from '$lib/components/AnimatedNumber.svelte';
 	  import {ChevronRight, ChevronsDown} from '@lucide/svelte';
     import {reveal} from 'svelte-reveal';
     import LogoHero from "$lib/assets/LogoHero.jpg";
@@ -20,8 +18,6 @@
 
     // Services
     import { Music2, Instagram, Tv, Codesandbox } from '@lucide/svelte';
-    import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte'; 
-    // import {TreeD} from '$lib/assets/3d.png';
     // data Why Choose us
     const features = [
     {
@@ -135,6 +131,25 @@
   }
 ];
 
+// Ganti import statis dengan dynamic import
+import { onMount } from 'svelte';
+      let components = {
+        Accordion: null,
+        TestimonialCarousel: null,
+        AnimatedNumber: null
+      };
+
+
+  onMount(async () => {
+    try {
+      components.Accordion = (await import('$lib/components/Accordion.svelte')).default;
+      components.TestimonialCarousel = (await import('$lib/components/TestimonialCarousel.svelte')).default;
+      components.AnimatedNumber = (await import('$lib/components/AnimatedNumber.svelte')).default;
+    } catch (err) {
+      console.error("Component loading failed:", err);
+    }
+  });
+
 
     // Build unique categories + "All"
     let categories = ["All", ...new Set(portfolios.map(p => p.category))];
@@ -144,8 +159,6 @@
   $: filtered = active === "All"
     ? portfolios
     : portfolios.filter(p => p.category === active);
-
-
 </script>
 
 
@@ -175,7 +188,7 @@
         </div>
 
         <div class="lg:w-1/2 " >
-            <img src={LogoHero} loading="lazy" img alt="hero-page" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
+            <img src={LogoHero} loading="lazy" decoding="async" alt="Cartes Studio - Professional Digital Marketing and Content Creation Services" class="w-full rounded-lg shadow-lg sr__hide" use:reveal>
         </div>
     </div>
 </section>
@@ -212,26 +225,28 @@
     </div>
 
       <div class="w-3/4 mx-auto mt-10 flex flex-col items-center justify-center content-center gap-3 pb-10 lg:flex-row lg:gap-10 " use:reveal={{preset: 'fade',y: 100, duration: '2000'}}>
-          <AnimatedNumber
+        {#if components.AnimatedNumber}
+        <components.AnimatedNumber
           target={5000}
           label="Streaming Time"
           content="Hours "
           duration={1500}
           classes="mx-auto" />
-
-          <AnimatedNumber
+      
+        <components.AnimatedNumber
           target={50}
           label="Trusted by Client"
           content="Brands & SMEs "
           duration={1500}
           classes="mx-auto" />
-
-          <AnimatedNumber
+      
+        <components.AnimatedNumber
           target={30}
           label="Expanding to"
           content="Content Niches"
           duration={1500}
           classes="mx-auto" />
+      {/if}
       </div>
 </section>
 
@@ -241,8 +256,8 @@
       <h1 class="font-extrabold text-4xl text-accent text-center mb-10">Official Partner</h1>
   
       <div class="flex justify-around items-center gap-6 w-full">
-        <img src={Tiktok} alt="Google" class="w-40 h-auto py-2 object-contain" />
-        <img src={Shopee} alt="Shopee" class="w-40 h-auto py-2 object-contain" />
+        <img src={Tiktok} alt="TikTok Official Partner - Cartes Studio" class="w-40 h-auto py-2 object-contain" />
+        <img src={Shopee} alt="Shopee Official Partner - Cartes Studio" class="w-40 h-auto py-2 object-contain" />
       </div>
     </div>
 </section>
@@ -324,7 +339,7 @@
           <img 
           loading="lazy"
             src={portfolio.image} 
-            alt={portfolio.title} 
+            alt="Portfolio project: {portfolio.title} - {portfolio.category} content creation by Cartes Studio" 
             class="w-full h-100 aspect-9/16 object-cover group-hover:scale-105 transition-transform duration-500"
           />
           <div class="p-5 flex flex-col gap-2">
@@ -350,7 +365,8 @@
     </div>
 
     <!-- Component Testimonial -->
+   {#if components.TestimonialCarousel} 
     <TestimonialCarousel />
-
+    {/if}
   </div>
 </section>
