@@ -7,6 +7,10 @@
 
   // Get SEO data from page data
   const seo = $derived($page.data || {});
+
+    // Check if current page is an error page
+    const isErrorPage = $derived($page.error || $page.route?.id?.includes('error') || false);
+
   
   // Business schema for structured data
   const businessSchema = {
@@ -76,8 +80,20 @@
   {@html `<script type="application/ld+json">${JSON.stringify(businessSchema)}</script>`}
 </svelte:head>
 
-<main class="relative">
+{#if isErrorPage}
+  <!-- Tampilkan hanya konten error tanpa navbar dan footer -->
+  {@render children()}
+{:else}
+  <!-- Tampilkan layout normal dengan navbar dan footer -->
+  <main class="relative">
+    <Navbar />
+    {@render children()}
+    <Footer />
+  </main>
+{/if}
+
+<!-- <main class="relative">
     <Navbar/>
     {@render children()}
     <Footer/>
-</main>
+</main> -->
