@@ -5,7 +5,7 @@
       <div>
         <div class="flex items-center gap-2 mb-4">
           <img src="/logo.png" alt="logo" class="w-10">
-          <span class="text-xl font-bold text-white">Cartes ID</span>
+          <span class="text-xl font-bold text-white">Cartes Studio</span>
         </div>
         <p class="text-sm text-gray-300">
           Kami bukan hanya tim kreatif, tapi mitra jangka panjang
@@ -40,7 +40,7 @@
       <div>
         <h3 class="text-lg font-semibold mb-3">Contact</h3>
         <ul class="space-y-2 text-gray-300 text-sm">
-          <li>Email: info@cartes.id</li>
+          <li>Email: cartesstudio@gmail.com</li>
           <li>Phone: +62 878 8987 5535</li>
           <li>Location: Tangerang, Indonesia</li>
         </ul>
@@ -48,7 +48,7 @@
     </div>
   
     <div class="mt-10 border-t border-gray-600 pt-6 text-center text-sm text-gray-400">
-      &copy; {new Date().getFullYear()} Cartes ID. All rights reserved.
+      &copy; {new Date().getFullYear()} Cartes Studio. All rights reserved.
     </div>
   </footer>
   

@@ -219,10 +219,10 @@ import { onMount } from 'svelte';
     <div class="max-w-3xl mx-auto mb-10 px-4">
 
       <h2 class="text-2xl font-extrabold mb-6 text-primary-dark" use:reveal={{preset: 'fade', duration: '3000'}}>
-        Why Choose Cartes.id?
+        Why Choose Cartes Studio?
       </h2>
       <p class="text-gray-500 leading-relaxed" use:reveal={{preset: 'fade',y: 100, duration: '1000'}}>
-        Cartes.id adalah partner strategis brand Anda dalam membangun, mengelola, dan mengembangkan aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital.
+        Cartes Studio adalah partner strategis brand Anda dalam membangun, mengelola, dan mengembangkan aset digital mulai dari live streaming, produksi konten, manajemen media sosial, hingga foto produk untuk mendorong pertumbuhan jangka panjang di era digital.
       </p>
     </div>
 

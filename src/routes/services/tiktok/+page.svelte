@@ -160,7 +160,7 @@
 
   <div class="relative z-10 text-center text-white px-6">
     <h1 class="text-4xl md:text-5xl leading-tight tracking-wide">
-      <span class="block uppercase text-base text-accent mb-2">cartes ID</span>
+      <span class="block uppercase text-base text-accent mb-2">Cartes Studio</span>
       <span class="block font-bold text-white">SOSIAL MEDIA CONTENT</span>
       <span class="block font-light text-slate-300">TIKTOK</span>
     </h1>
