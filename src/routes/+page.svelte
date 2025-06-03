@@ -133,6 +133,7 @@
 
 // Ganti import statis dengan dynamic import
 import { onMount } from 'svelte';
+  import TestimonialCarousel from '$lib/components/TestimonialCarousel.svelte';
       let components = {
         Accordion: null,
         TestimonialCarousel: null,
