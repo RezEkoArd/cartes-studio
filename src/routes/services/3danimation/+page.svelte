@@ -208,9 +208,9 @@ style="background-image: url('/background/bg-6.jpg')"
         Setiap project memiliki kebutuhan unik. Mari diskusikan kebutuhan spesifik Anda untuk mendapatkan penawaran terbaik.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button class="px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+        <a href="/contact" class=" px-8 py-3 bg-gradient-to-r from-primary to-primary-dark text-white font-semibold rounded-xl hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 cursor-pointer">
           Hubungi Kami
-        </button>
+        </a>
         <button class="px-8 py-3 border-2 border-primary/30 text-primary dark:text-primary-light font-semibold rounded-xl hover:bg-primary/5 dark:hover:bg-primary/10 transition-all duration-300">
           Lihat Portfolio
         </button>
