@@ -28,6 +28,10 @@ Built with **SvelteKit (supporting Runes)** and **Nodemailer**, the project deli
 
 _You can add screenshots of the homepage, portfolio, and contact form here._
 
+![Alt Text](./assets/pictures/homepage.png)
+![Alt Text](./assets/pictures/contact.png)
+
+
 ```bash
 📁 /assets/pictures/homepage.png
 📁 /assets/pictures/contact.png
