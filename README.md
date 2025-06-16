@@ -1,38 +1,33 @@
-# sv
+# 📸 Cartes Studio
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+A freelance web project for a photography agency company. This website showcases a clean and responsive portfolio layout, supports client bookings, and provides direct contact via email.
 
-## Creating a project
+Built with **SvelteKit (supporting Runes)** and **Nodemailer**, the project delivers a lightweight and performant user experience, tailored for a modern digital presence.
 
-If you're seeing this, you've probably already done this step. Congrats!
+---
+
+## 🚀 Features
+
+- 📁 Portfolio listing to showcase photography works  
+- 📩 Contact form integrated with Nodemailer for sending emails  
+- 📱 Fully responsive on mobile, tablet, and desktop  
+- ⚡ Fast and optimized with SvelteKit  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** SvelteKit (with Runes support)  
+- **Styling:** Tailwind CSS  
+- **Email Handling:** Nodemailer  
+- **Deployment:** VPS, AAPanel  
+
+---
+
+## 🖼️ Screenshots
+
+_You can add screenshots of the homepage, portfolio, and contact form here._
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+📁 /assets/pictures/homepage.png
+📁 /assets/pictures/contact.png
